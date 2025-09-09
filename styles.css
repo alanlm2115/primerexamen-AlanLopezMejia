@@ -1,14 +1,29 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff;
+  color: #000000;
+  font-family: sans-serif;
+}
+
+
 .skip-link {
   position: absolute;
   left: -9999px;
   top: auto;
 }
+
 .skip-link:focus {
   left: 8px;
   top: 8px;
   padding: 8px 10px;
-  background: #fff;
-  border: 2px solid #333;
+  background: #969191;
+  border: 2px solid #000000;
   border-radius: 4px;
 }
 
@@ -16,6 +31,7 @@
   outline: 3px solid #555;
   outline-offset: 2px;
 }
+
 
 .sr-only {
   position: absolute;
@@ -29,11 +45,6 @@
   border: 0;
 }
 
-body {
-  background: #fff;
-  color: #222;
-  font-family: sans-serif;
-}
 
 header, footer, section {
   border: 1px solid #cfcfcf;
@@ -61,4 +72,200 @@ li {
 nav ul {
   display: flex;
   gap: 1rem;
+}
+
+
+@media (max-width: 600px) {
+
+
+  header {
+    background: #d10000; 
+    color: #fff;
+    padding: 16px;
+    position: relative;
+  }
+
+  
+  nav ul {
+    display: none;  
+  }
+
+  nav::after {
+    content: "≡";  
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  nav.open ul {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 16px;
+    background: #d10000;
+    padding: 10px;
+    width: 150px;
+    border-radius: 8px;
+  }
+
+  nav.open ul li {
+    padding: 8px;
+  }
+
+  nav.open ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  main > section[aria-label="Banner"] {
+    background: #f3f3f3;
+    border-radius: 10px;
+    padding: 22px 16px;
+    margin: 16px 0;
+    text-align: left;
+  }
+
+  main > section[aria-label="Banner"] h2 {
+    font-size: 1.6rem;
+    font-weight: 1200;
+    line-height: 1.25;
+    margin: 0;
+    color: #000000;
+  }
+
+
+  section[aria-label="Productos"] ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+
+  section[aria-label="Productos"] li article {
+    background: #fff;
+    border: 2px solid #bcbcbc;
+    border-radius: 10px;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 100px 1fr; 
+    column-gap: 12px;
+    align-items: center;
+  }
+
+  section[aria-label="Productos"] li article img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    background: #ddd;
+    border: 2px solid #9b9b9b;
+    border-radius: 6px;
+  }
+
+  section[aria-label="Productos"] li article h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  section[aria-label="Productos"] li article p {
+    margin: 0 0 12px;
+    font-size: 1rem;
+  }
+
+  section[aria-label="Productos"] li article button {
+    background: #eee;
+    border: 1px solid #bbb;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 14px;
+    background: #fff;
+  }
+
+  footer p {
+    margin: 0;
+    color: #0057ff; 
+    font-weight: 600;
+  }
+}
+
+
+@media (min-width: 600px) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 24px; 
+  }
+
+  
+  nav a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+  }
+
+  
+  header h1 {
+    font-size: 2rem;
+  }
+
+  
+  section[aria-label="Productos"] ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px; 
+  }
+
+  section[aria-label="Productos"] li article {
+    grid-template-columns: 1fr;
+    margin-bottom: 24px; 
+  }
+
+  section[aria-label="Productos"] li article img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    margin-bottom: 12px;
+  }
+
+  
+  section[aria-label="Productos"] li article h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  section[aria-label="Productos"] li article p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  section[aria-label="Productos"] li article button {
+    background: #f3f3f3c2;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  
+  footer p {
+    color: #222;
+    font-weight: 400;
+  }
 }
