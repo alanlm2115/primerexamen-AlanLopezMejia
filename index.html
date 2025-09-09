@@ -4,21 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Landing Page MANACO</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
   <header>
     <h1>MANACO</h1>
-    <nav>
+    <nav aria-label="Menú principal">
       <ul>
-        <li><a href="#">Inicio</a></li>
+        <li><a href="#" aria-current="page">Inicio</a></li>
         <li><a href="#">Servicios</a></li>
         <li><a href="#">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="contenido" tabindex="-1">
     <section aria-label="Banner">
       <h2>Calzado que impulsa tu paso</h2>
     </section>
@@ -28,23 +31,40 @@
       <ul>
         <li>
           <article>
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='100'%3E%3Crect width='100%25' height='100%25' fill='%23ddd' stroke='%23999' stroke-width='2'/%3E%3C/svg%3E"
+              alt="Imagen referencial de Producto 1"
+              width="140" height="100"
+            />
             <h3>Producto 1</h3>
-            <p>Precio: $00.00</p>
-            <button>Comprar</button>
+            <p><span class="sr-only">Precio: </span>$00.00</p>
+            <button type="button">Comprar</button>
           </article>
         </li>
+
         <li>
           <article>
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='100'%3E%3Crect width='100%25' height='100%25' fill='%23ddd' stroke='%23999' stroke-width='2'/%3E%3C/svg%3E"
+              alt="Imagen referencial de Producto 2"
+              width="140" height="100"
+            />
             <h3>Producto 2</h3>
-            <p>Precio: $00.00</p>
-            <button>Comprar</button>
+            <p><span class="sr-only">Precio: </span>$00.00</p>
+            <button type="button">Comprar</button>
           </article>
         </li>
+
         <li>
           <article>
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='100'%3E%3Crect width='100%25' height='100%25' fill='%23ddd' stroke='%23999' stroke-width='2'/%3E%3C/svg%3E"
+              alt="Imagen referencial de Producto 3"
+              width="140" height="100"
+            />
             <h3>Producto 3</h3>
-            <p>Precio: $00.00</p>
-            <button>Comprar</button>
+            <p><span class="sr-only">Precio: </span>$00.00</p>
+            <button type="button">Comprar</button>
           </article>
         </li>
       </ul>
